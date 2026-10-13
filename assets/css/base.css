@@ -1,0 +1,68 @@
+/* WAY BEYOND - BASE CSS (Variáveis, Tipografia e Reset) */
+
+/* VARIÁVEIS GLOBAIS DE ESTILO (Paleta Horizontes & Céu Aberto) */
+:root {
+    --bg-color: #fbf9f5; /* Off-white suave de fundo */
+    --bg-header: rgba(251, 249, 245, 0.8); /* Transparência para o header */
+    --text-color: #233138; /* Slate escuro para textos e títulos */
+    --text-color-hover: #0c1114; /* Slate mais escuro para hover em textos */
+    --primary-color: #a0c4df; /* Azul céu suave para destaques e botões */
+    --surface-color: #e2ece9; /* Cinza-azulado neutro */
+    --accent-peach: #f3c5a5; /* Pêssego quente para elementos gráficos */
+    --support-sage: #c4d7b1; /* Verde-sálvia suave */
+
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+    
+    --max-width: 1200px; 
+    --transition: 0.3s ease;
+}
+
+/* RESET CSS BÁSICO */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* UTILITÁRIOS DE LAYOUT */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}

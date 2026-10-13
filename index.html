@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way Beyond - Explore o Mundo Além</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-way-beyond-transparent-faviconb.png" sizes="32x32">
+
+    <!-- Tipografia Oficial: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <!-- Google Material Symbols (brightness_6) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=brightness_6" />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO GLOBAL -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="logo-way-beyond-favicon.png" alt="Way Beyond Icon" class="logo-icon" id="logo-img">
+                <span class="logo-text">Way Beyond</span>
+            </a>
+
+            <!-- Navegação -->
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Início</a></li>
+                    <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Controles do Cabeçalho (Dark Mode + Hambúrguer) -->
+            <div class="header-actions" style="display: flex; align-items: center; gap: 12px;">
+                <!-- Chave Seletora Dark Mode -->
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Alternar Modo Escuro">
+                    <span class="material-symbols-outlined theme-icon">brightness_6</span>
+                </button>
+
+                <!-- Menu Hambúrguer (Mobile) -->
+                <button class="hamburger" id="hamburger-btn" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HERO -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="tagline">— VIAGENS COM PROPÓSITO</span>
+                    <h1 class="hero-title">Explore o Mundo <span>Além.</span></h1>
+                    <p class="hero-subtitle">Roteiros desenhados para quem deseja viajar com calma, profundidade e um novo olhar.</p>
+                    <a href="destinos.html" class="btn btn-primary">Ver Destinos <span class="arrow">&rarr;</span></a>
+                    <div class="scroll-hint">ROLE PARA EXPLORAR</div>
+                </div>
+                
+                <div class="hero-visual">
+                    <!-- Formas geométricas de fundo exatas do protótipo -->
+                    <div class="shape shape-peach"></div>
+                    <div class="shape shape-sage-mountains"></div>
+
+                    <!-- Moldura da imagem em arco -->
+                    <div class="hero-card-image">
+                        <img src="assets/images/cerejeira.jpg" alt="Cerejeiras no Japão">
+                        <div class="geo-coords">38° 42' N<br>9° 08' W</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO NOSSA ESSÊNCIA -->
+        <section class="essence-section">
+            <div class="container essence-container">
+                <div class="essence-label">
+                    <span class="section-number">01</span>
+                    <span class="section-tag">NOSSA ESSÊNCIA</span>
+                </div>
+                <div class="essence-heading">
+                    <h2>Menos pressa.<br><strong>Mais presença.</strong></h2>
+                </div>
+                <div class="essence-text">
+                    <p>Não acreditamos em apenas passar por um lugar. Criamos jornadas minimalistamente pensadas para abrir espaço para o inesperado, para conversas verdadeiras e para as memórias que ficam.</p>
+                    <p>Cada roteiro é um convite para ir além do óbvio — respeitando a cultura, a paisagem e o seu próprio ritmo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DESTINOS EM DESTAQUE -->
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">UMA CURADORIA ESPECIAL</span>
+                        <h2 class="section-title">Destinos em <span>destaque</span></h2>
+                    </div>
+                    <a href="destinos.html" class="btn btn-outline">Ver Todos os Destinos <span class="arrow">&rarr;</span></a>
+                </div>
+
+                <!-- ID ajustado para corresponder exatamente ao que o JavaScript procura -->
+                <div class="destinos-grid" id="destinos-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ GLOBAL -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span>Way Beyond</span>
+                </a>
+                <p class="footer-tagline">Viagens que respeitam o seu tempo e ampliam o seu horizonte.</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X-Twitter" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Way Beyond. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="assets/js/destinos-data.js" defer></script>
+    <script type="module" src="assets/js/main.js" defer></script>
+</body>
+</html>

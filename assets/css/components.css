@@ -1,0 +1,424 @@
+/* WAY BEYOND - COMPONENTS CSS (Header, Buttons, Cards & Footer)*/
+
+/* Cabeçalho Global */
+
+.header {
+    background-color: var(--bg-header);
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(35, 49, 56, 0.08);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+/* Navegação */
+.nav-list {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-color-hover);
+
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 101%;
+    height: 2px;
+}
+
+/* Botão Hamburger (Mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    padding: 4px;
+}
+
+.hamburger .bar {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: var(--transition);
+}
+
+/* Botões Globais */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: #233138;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background-color: #121a1f;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid var(--text-color);
+    color: var(--text-color) !important;
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: var(--text-color);
+    color: #ffffff !important;
+}
+
+/* Cards de Destinos */
+.destinos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.destino-card {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.destino-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destino-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-number {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #233138;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+.card-content {
+    padding: 24px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-country {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #4a5568;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-link:hover {
+    color: var(--primary-color);
+}
+
+/* Rodapé Global */
+.footer {
+    background-color: #233138;
+    color: #ffffff;
+    padding: 60px 0 24px 0;
+    margin-top: 80px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(251, 249, 245, 0.1);
+}
+
+.footer-nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    flex: 1; 
+    margin-top: 0;
+}
+
+.footer-nav a {
+    color: #FBF9F5;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: all 0.2s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom {
+    padding-top: 24px;
+    font-size: 0.8rem;
+    color: #718096;
+}
+
+/* Responsividade Base dos Componentes */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .destinos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+/* ==========================================================================
+   CONFIGURAÇÃO E CORREÇÃO DO DARK MODE
+   ========================================================================== */
+body.dark-mode {
+    --bg-color: #12181b;          
+    --text-color: #FBF9F5;
+    --text-color-hover: #dadde2;        
+    --surface-color: #1a2327;     
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Transição suave ao alternar o tema */
+body, .header, .destino-card, .footer {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Correção de Botões no Dark Mode */
+body.dark-mode .btn-primary {
+    background-color: #FBF9F5;
+    color: #12181b !important;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #e2e8f0;
+}
+
+body.dark-mode .btn-outline {
+    border-color: #FBF9F5;
+    color: #FBF9F5 !important;
+}
+
+body.dark-mode .btn-outline:hover {
+    background-color: #FBF9F5;
+    color: #12181b !important;
+}
+
+/* Ajustes específicos para elementos no Dark Mode */
+body.dark-mode .header {
+    background-color: rgba(18, 24, 27, 0.9);
+    border-bottom: 1px solid rgba(251, 249, 245, 0.08);
+}
+
+body.dark-mode .destino-card {
+    background-color: var(--surface-color);
+    border: 1px solid rgba(251, 249, 245, 0.08);
+}
+
+/* Cores de títulos e subtítulos no Dark Mode */
+body.dark-mode .card-title,
+body.dark-mode .section-title,
+body.dark-mode .hero-title,
+body.dark-mode .essence-heading h2 {
+    color: #FBF9F5 !important;
+}
+
+body.dark-mode .card-description,
+body.dark-mode .hero-subtitle,
+body.dark-mode .essence-text p {
+    color: #a0aec0 !important;
+}
+
+body.dark-mode .section-tag,
+body.dark-mode .essence-label .section-number,
+body.dark-mode .essence-label .section-tag {
+    color: #a0aec0 !important;
+}
+
+/* Correção do Rodapé no Dark Mode */
+body.dark-mode .footer {
+    background-color: #0d1113;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .footer-nav a,
+body.dark-mode .footer-bottom p,
+body.dark-mode .footer-tagline {
+    color: rgba(251, 249, 245, 0.8) !important;
+}
+
+/* Botão seletor de tema no cabeçalho */
+.theme-toggle {
+    background: none;
+    border: 1px solid rgba(160, 174, 192, 0.4);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-toggle .theme-icon {
+    font-size: 20px;
+    color: #233138;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    transition: transform 0.3s ease;
+    
+}
+
+.theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: #233138;
+}
+
+.theme-toggle:hover .theme-icon {
+    transform: scale(1.1);
+}
+
+body.dark-mode .theme-toggle {
+    border-color: rgba(251, 249, 245, 0.35);
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #FBF9F5;
+}
+
+body.dark-mode .theme-toggle .theme-icon {
+    color: #FBF9F5 !important;
+}
